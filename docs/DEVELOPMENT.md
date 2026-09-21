@@ -29,7 +29,7 @@ Nothing under `fixtures/` is in the repository. A fixture block whose file is mi
 
 ## Fixtures
 
-McMaster-Carr's terms of use prohibit copying or redistributing page content, including its arrangement, so page captures stay on your machine. Sanitizing them is still worth doing: it strips your account details from a logged-in save, drops most of the size, and is what you should hand over if you ever share a capture privately with another contributor.
+McMaster-Carr's terms of use prohibit copying or redistributing page content, including its arrangement, so page captures stay on your machine and are never shared, sanitized or not. Sanitizing scrambles part numbers and prices, but category names, column labels, spec values and the page structure are still McMaster-Carr's content. Every contributor makes their own captures. Sanitizing is still worth doing locally: it strips your account details from a logged-in save and drops most of the size.
 
 The sanitizer keeps only the `#ProductPage` subtree and strips scripts, styles, comments, SVG contents and every attribute except `id`, `class`, `colspan`, `rowspan`, `role`, `type`, `tabindex` and `data-testid`. Part numbers are replaced with sequential `9xxxxAxxx` values and prices with seeded pseudo-random amounts, so the same page always sanitizes to the same output. Category names, column labels and spec values are kept as they were.
 
