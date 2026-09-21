@@ -1,0 +1,23 @@
+{
+  "name": "catalog-tools-for-mcmaster-carr",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Userscript: price and category filters for McMaster-Carr category pages, plus JSON export of the parsed tables.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NathanRWoodward/Catalog-Tools-for-McMaster-Carr.git"
+  },
+  "homepage": "https://github.com/NathanRWoodward/Catalog-Tools-for-McMaster-Carr#readme",
+  "bugs": {
+    "url": "https://github.com/NathanRWoodward/Catalog-Tools-for-McMaster-Carr/issues"
+  },
+  "scripts": {
+    "test": "node test/parse.test.mjs",
+    "fixtures": "node scripts/sanitize-fixture.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^29.1.1"
+  }
+}

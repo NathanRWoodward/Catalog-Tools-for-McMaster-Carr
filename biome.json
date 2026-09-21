@@ -1,0 +1,19 @@
+{
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "style": {
+        "useBlockStatements": {
+          "level": "error",
+          "fix": "safe"
+        }
+      },
+      "correctness": {
+        "noUnusedVariables": {
+          "level": "error",
+          "fix": "safe"
+        }
+      }
+    }
+  }
+}
