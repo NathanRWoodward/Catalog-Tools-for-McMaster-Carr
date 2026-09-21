@@ -7,8 +7,8 @@
 // @license      MIT
 // @homepageURL  https://github.com/NathanRWoodward/Catalog-Tools-for-McMaster-Carr
 // @supportURL   https://github.com/NathanRWoodward/Catalog-Tools-for-McMaster-Carr/issues
-// @downloadURL  https://raw.githubusercontent.com/NathanRWoodward/Catalog-Tools-for-McMaster-Carr/main/mcmaster-catalog-tools.user.js
-// @updateURL    https://raw.githubusercontent.com/NathanRWoodward/Catalog-Tools-for-McMaster-Carr/main/mcmaster-catalog-tools.user.js
+// @downloadURL  https://github.com/NathanRWoodward/Catalog-Tools-for-McMaster-Carr/releases/latest/download/mcmaster-catalog-tools.user.js
+// @updateURL    https://github.com/NathanRWoodward/Catalog-Tools-for-McMaster-Carr/releases/latest/download/mcmaster-catalog-tools.user.js
 // @match        https://www.mcmaster.com/*
 // @run-at       document-idle
 // @noframes

@@ -10,6 +10,9 @@
 | `fixtures/raw/` | Your own browser saves before sanitizing. Local only. |
 | `scripts/sanitize-fixture.mjs` | Turns a raw save into a test fixture. |
 | `biome.json` | Formatter and lint rules. VS Code formats on save with the Biome extension. |
+| `scripts/version.mjs` | Checks that the script header, the `VERSION` constant, `package.json` and the lockfile agree, or syncs them from `package.json`. |
+| `.githooks/pre-commit` | Runs that check on the staged files. |
+| `.github/workflows/release.yml` | Publishes a GitHub release with the script attached when a `vX.Y.Z` tag is pushed. |
 
 ## Tests
 
@@ -17,6 +20,8 @@
 npm install
 npm test
 ```
+
+`npm install` also points git at `.githooks`, so the pre-commit version check runs from then on.
 
 The test loads the userscript into a jsdom window for each fixture with scripts disabled, sets `window.__mctNoAutoInit`, and drives the parser and filters through `window.__mct`. Expectations pin table counts, header groups, price labels, spec keys and filter behaviour.
 
@@ -81,5 +86,9 @@ The script exposes `window.__mct` on McMaster pages:
 
 ## Releasing
 
-1. Bump `@version` in the userscript header, the `VERSION` constant below it, and `version` in `package.json`.
-2. Commit to `main`. Userscript managers fetch updates from the `@updateURL` in the header, which points at the raw file on GitHub, so the repository must be public for installs and updates to work.
+A release is a GitHub release with the script attached as an asset. The install link in the README and the `@downloadURL` and `@updateURL` in the script header point at `releases/latest/download/…`, so users always get the newest release rather than whatever is on `main`. The repository must stay public for those URLs to work.
+
+1. On a clean `main`, run `npm version patch`, or `minor`, `major` or an exact `1.2.3`. It runs the tests, bumps `package.json` and the lockfile, copies the version into the script header and the `VERSION` constant, commits, and tags `vX.Y.Z`.
+2. Run `git push --follow-tags`. The tag triggers `.github/workflows/release.yml`, which checks that the tag matches the file versions, syntax-checks the script, and creates the release with generated notes.
+
+`node scripts/version.mjs check` lists every place a version lives and fails when they differ. The pre-commit hook runs it on the staged files, so the versions cannot drift between commits. A release that already exists is not overwritten: delete the release and the tag, or tag a new version.

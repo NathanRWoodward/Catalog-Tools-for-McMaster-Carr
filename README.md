@@ -31,13 +31,13 @@ Download or copy every part on the page as JSON, or only the rows that pass the 
 ## Install
 
 1. Install a userscript manager: [Tampermonkey](https://www.tampermonkey.net/), [Violentmonkey](https://violentmonkey.github.io/) or [Greasemonkey](https://www.greasespot.net/).
-2. Open the install link and click **Install** when your manager shows the script:
+2. Click the following link and then press **Install** when your manager displays the script:
 
-   <https://raw.githubusercontent.com/NathanRWoodward/Catalog-Tools-for-McMaster-Carr/main/mcmaster-catalog-tools.user.js>
+   <https://github.com/NathanRWoodward/Catalog-Tools-for-McMaster-Carr/releases/latest/download/mcmaster-catalog-tools.user.js>
 
 3. Open any McMaster-Carr category page. The blocks appear in the "Filter by" sidebar.
 
-Updates arrive on your manager's normal schedule. If the link opens as plain text or the blocks do not appear, see [troubleshooting](docs/GUIDE.md#troubleshooting).
+Updates arrive on your manager's normal schedule. Every version is on the [releases page](https://github.com/NathanRWoodward/Catalog-Tools-for-McMaster-Carr/releases). If the link opens as plain text or the blocks do not appear, see [troubleshooting](docs/GUIDE.md#troubleshooting).
 
 ## Good to know
 

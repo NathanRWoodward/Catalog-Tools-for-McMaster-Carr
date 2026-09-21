@@ -15,7 +15,10 @@
   },
   "scripts": {
     "test": "node test/parse.test.mjs",
-    "fixtures": "node scripts/sanitize-fixture.mjs"
+    "fixtures": "node scripts/sanitize-fixture.mjs",
+    "prepare": "git config core.hooksPath .githooks || exit 0",
+    "preversion": "npm test",
+    "version": "node scripts/version.mjs sync && git add mcmaster-catalog-tools.user.js package-lock.json"
   },
   "devDependencies": {
     "jsdom": "^29.1.1"
