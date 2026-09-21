@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Catalog Tools for McMaster-Carr
 // @namespace    https://github.com/NathanRWoodward
-// @version      0.2.0
+// @version      0.2.1
 // @description  Unofficial: price and category filters for McMaster-Carr category pages, plus JSON export of the parsed tables.
 // @author       Nathan W.
 // @license      MIT
@@ -58,7 +58,7 @@ class DeltaTimer {
 (() => {
   const css = String.raw;
 
-  const VERSION = "0.2.0";
+  const VERSION = "0.2.1";
   const PREF_KEY = "mct.prefs";
 
   function log(text) {

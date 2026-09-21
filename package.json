@@ -1,6 +1,6 @@
 {
   "name": "catalog-tools-for-mcmaster-carr",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "type": "module",
   "description": "Userscript: price and category filters for McMaster-Carr category pages, plus JSON export of the parsed tables.",
