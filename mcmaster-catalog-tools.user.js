@@ -406,7 +406,16 @@ class DeltaTimer {
         justify-content: center;
         width: unset !important;
         flex-grow: 1;
+
+        #ProdPageContent_Inner {
+          flex: 0 1 auto;
+          min-width: 0;
+        }
       }
+    }
+
+    [class^="_emphasizingTilesContainerWithoutButton"] [class^="_row"] {
+      display: contents;
     }
   `;
 
